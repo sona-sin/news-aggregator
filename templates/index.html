@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+        label {
+            font-size: 1.1em;
+            color: #495057;
+        }
+        input[type="text"] {
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            padding: 15px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #a8f14f;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c4f18d;
+        }
+        .summary, .points {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .summary h2, .points h2 {
+            color: #a8f14f;
+        }
+        .points ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .points li {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">News Aggregator</h1>
+        <form method="post" action="/" class="text-center">
+            <div class="form-group">
+                <label for="url">Enter URL of News Article to get Summary of News:</label>
+                <input type="text" id="url" name="url" class="form-control" placeholder="https://example.com" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        {% if summary %}
+            <div class="summary mt-4">
+                <h2>Summary:</h2>
+                <p>{{ summary }}</p>
+            </div>
+        {% endif %}
+
+      
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
