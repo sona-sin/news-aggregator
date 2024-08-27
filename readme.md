@@ -16,4 +16,4 @@ This is a News Aggregator website built using Flask, which scrapes news articles
 
 ## Visuals
 
-![homepage](screenshots/img.png)
+![homepage](Screenshots/img.png)
